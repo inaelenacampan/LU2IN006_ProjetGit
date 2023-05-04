@@ -1,0 +1,17 @@
+Exemple de commandes à tapper dans le terminal , en suppossant Files et C.c / D.c déjà créés
+> le dossier files : contient A.c et B.c (à modifier le contenu pour voir l'évolution du merge et du restore)
+> C.c et D.c : aussi utilisés pour des tests, à modifier selon les cas à traiter
+
+valgrind ./myGit init
+valgrind ./myGit branch Feature1
+valgrind ./myGit list-refs
+valgrind ./myGit get-current-branch
+valgrind ./myGit add Files C.c
+valgrind ./myGit commit master -m "premierCommit"
+valgrind ./myGit checkout-branch Feature1
+valgrind ./myGit add Files D.c
+valgrind ./myGit commit Feature1 -m "deuxiemeCommit"
+valgrind ./myGit branch-print Feature1
+valgrind ./myGit checkout-branch master
+valgrind ./myGit merge Feature1 "mergedpuisremote"
+valgrind ./myGit branch-print master
